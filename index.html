@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web de prueba</title>
+  <meta name="description" content="Web de prueba desplegada en Vercel desde GitHub.">
+  <style>
+    :root { --bg:#0b1020; --card:#141a2e; --text:#e6e9f2; --muted:#9aa3b8; --accent:#7c5cff; --accent2:#22d3ee; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+    a { color:inherit; }
+    header { max-width:1000px; margin:0 auto; padding:20px 16px; display:flex; justify-content:space-between; align-items:center; }
+    .logo { font-weight:700; letter-spacing:.5px; }
+    nav a { margin-left:20px; color:var(--muted); text-decoration:none; }
+    nav a:hover { color:var(--text); }
+    .hero { max-width:1000px; margin:0 auto; padding:80px 16px 60px; text-align:center; }
+    .hero h1 { font-size:clamp(2.2rem,6vw,4rem); line-height:1.1; margin:0 0 16px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .hero p { color:var(--muted); font-size:1.15rem; max-width:600px; margin:0 auto 32px; }
+    .btn { display:inline-block; padding:12px 24px; border-radius:10px; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; }
+    .btn:hover { filter:brightness(1.1); }
+    .grid { max-width:1000px; margin:0 auto; padding:20px 16px 80px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .card { background:var(--card); border:1px solid #232b45; border-radius:14px; padding:24px; }
+    .card h3 { margin:0 0 8px; }
+    .card p { margin:0; color:var(--muted); }
+    footer { text-align:center; color:var(--muted); padding:24px 16px; border-top:1px solid #1d2440; font-size:.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">⚡ Web de prueba</div>
+    <nav><a href="#features">Características</a><a href="https://github.com/davidlucaspodoks/web-prueba">GitHub</a></nav>
+  </header>
+  <section class="hero">
+    <h1>Desplegada en Vercel</h1>
+    <p>Una web estática de prueba: el código vive en GitHub y cada push a <code>main</code> se publica automáticamente.</p>
+    <a class="btn" href="#features">Ver más</a>
+  </section>
+  <section class="grid" id="features">
+    <div class="card"><h3>🚀 Rápida</h3><p>HTML y CSS puros, servidos desde la red global de Vercel.</p></div>
+    <div class="card"><h3>🔁 Despliegue continuo</h3><p>Cada commit genera un nuevo despliegue sin hacer nada más.</p></div>
+    <div class="card"><h3>📱 Responsive</h3><p>Se adapta a móvil, tablet y escritorio.</p></div>
+  </section>
+  <footer>Hecho con GitHub + Vercel · <span id="y"></span></footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
